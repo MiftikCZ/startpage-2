@@ -23,8 +23,10 @@ function setTime() {
     document.getElementById("clocks").innerHTML = ret
 }
 
-setInterval(()=>{
-    setTime()
+setTimeout(()=>{
+    setInterval(()=>{
+        setTime()
+    },15 * 1000)
 },(60 - new Date().getMinutes()) * 1000)
 
 setTime()
