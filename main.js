@@ -24,6 +24,7 @@ function setTime() {
 }
 
 setInterval(()=>{
-    setTime ()
-    
-},1000)
+    setTime()
+},(60 - new Date().getMinutes()) * 1000)
+
+setTime()
